@@ -1,0 +1,20 @@
+{
+  "pipeline": "ipl_analytics_pipeline",
+  "ci_cd_platform": "GitHub Actions",
+  "workflow_file": ".github/workflows/pipeline.yml",
+  "note": "Add workflow/scope to GH_TOKEN to push the GitHub Actions YAML",
+  "stages": [
+    "lint",
+    "test",
+    "dq-validate",
+    "deploy"
+  ],
+  "schedule": "0 8 * * *",
+  "branching_strategy": "gitflow",
+  "secrets": [
+    "DB_CONNECTION",
+    "AIRFLOW_CONN",
+    "SLACK_WEBHOOK"
+  ],
+  "generated_by": "Ved \u2014 Mu Sigma DE Skill Phase 12"
+}
